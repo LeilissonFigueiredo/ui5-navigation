@@ -3,13 +3,15 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("sap.ui.demo.nav.controller.App", {
+	const App = BaseController.extend("sap.ui.demo.nav.controller.App", {
 
 		onInit: function () {
 
 		}
 
 	});
+
+	return App;
 
 });
 
