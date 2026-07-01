@@ -3,13 +3,13 @@
 	"sap.app": {
 		"id": "sap.ui.demo.nav",
 		"type": "application",
-		"i18n": {
-			"bundleUrl": "i18n/i18n.properties",
-			"supportedLocales": [
-				""
-			],
-			"fallbackLocale": ""
-		},
+		 "i18n": {
+            "bundleName": "sap.ui.demo.nav.i18n.i18n",
+            "supportedLocales": [
+                ""
+            ],
+            "fallbackLocale": ""
+        },
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
@@ -61,6 +61,32 @@
 			},
 			"": {
 				"dataSource": "employeeRemote"
+			}
+		},
+		"routing": {
+			"config":{
+				"routerClass": "sap.m.Routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"path": "sap.ui.demo.nav.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition":"slide",
+				"async": true
+
+			},
+			"routes":[{
+				"pattern": "",
+				"name": "appHome",
+				"target": "home" 
+			}],
+			"targets": {
+				"home":{
+					"id": "home",
+					"name": "Home",
+					"level": 1
+				}
+
 			}
 		}
 	}
