@@ -1,0 +1,15 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# UI5 Tooling build outputs
+/dist/
+/target/
+/.ui5/
+
+# Local configuration and environment variables
+.env
+.env.*
+! .env.example
+default-env.json
+
