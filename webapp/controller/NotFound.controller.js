@@ -1,8 +1,8 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-],(Controller) => {
+    "sap/ui/demo/nav/controller/BaseController"
+],(BaseController) => {
     "use strict";
-    const NotFound = Controller.extend("sap.ui.demo.nav.controller.NotFound", {
+    const NotFound = BaseController.extend("sap.ui.demo.nav.controller.NotFound", {
         onInit(){
 
         }

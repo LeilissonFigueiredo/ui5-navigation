@@ -6,5 +6,7 @@
     <MessagePage 
         title="{i18n>notFound}"
         text="{i18n>notFound.text}"
-        description="{i18n>notFound.description}"/>
+        description="{i18n>notFound.description}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"/>
 </mvc:View>
