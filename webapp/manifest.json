@@ -78,16 +78,31 @@
 				"async": true
 
 			},
-			"routes":[{
-				"pattern": "",
-				"name": "appHome",
-				"target": "home" 
-			}],
+			"routes":[
+				{
+					"pattern": "",
+					"name": "appHome",
+					"target": "home"
+				},
+				{
+					"pattern": "employees",
+					"name": "employeeList",
+					"target":"employees"
+				}
+			],
 			"targets": {
 				"home":{
 					"id": "home",
 					"name": "Home",
 					"level": 1
+				},
+
+				"employees":{
+					"id": "employeeList",
+					"name": "EmployeeList",
+					"path": "sap.ui.demo.nav.view.employee",
+					"level": 2
+					
 				},
 
 				"notFound":{
