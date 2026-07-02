@@ -93,6 +93,11 @@
 					"pattern": "employee/{employeeID}",
 					"name": "employee",
 					"target": "employee"
+				},
+				{
+					"pattern": "employee/{employeeID}/resume",
+					"name": "employeeResume",
+					"target":"employeeResume"
 				}
 			],
 			"targets": {
@@ -116,6 +121,14 @@
 					"name": "Employee",
 					"level": 3
 
+				},
+
+				"employeeResume": {
+					"id": "resume",
+					"path": "sap.ui.demo.nav.view.employee",
+					"name": "Resume",
+					"level": 4,
+					"transition": "flip"
 				},
 		
 				"notFound":{

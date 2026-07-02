@@ -1,20 +1,20 @@
 sap.ui.define([
     "sap/ui/demo/nav/controller/BaseController",
-
 ],(BaseController) => {
     "use strict";
 
-    const Employee = BaseController.extend("sap.ui.demo.nav.controller.employee.Employee", {
+    const Resume = BaseController.extend("sap.ui.demo.nav.controller.employee.Resume", {
         onInit(){
             const router = this.getRouter();
-            router.getRoute("employee").attachPatternMatched(this._onObjectMatched, this)
+            router.getRoute("employeeResume").attachPatternMatched(this._onObjectMatched, this)
+
         },
 
         _onObjectMatched(oEvent){
             const eventArgs = oEvent.getParameter("arguments");
             const view = this.getView();
             view.bindElement({
-                path: "/Employees("+ eventArgs.employeeID + ")",
+                path: "/Employees(" + eventArgs.employeeID + ")",
                 events: {
                     change: this._onBindingChange.bind(this),
                     dataRequested: () => {
@@ -25,9 +25,9 @@ sap.ui.define([
                     }
                 },
                 model: "employees"
-            });  
+            })
         },
-
+        
         _onBindingChange(){
             // No data for the binding
             if (!this.getView().getBindingContext("employees")){
@@ -35,14 +35,7 @@ sap.ui.define([
             }
         },
 
-        onShowResume(){
-           const oContext = this.getView()?.getBindingContext("employees");
-           this.getRouter().navTo("employeeResume", {
-                employeeID:  oContext.getProperty("EmployeeID") 
-           })
-        }
     });
 
-    return Employee;
-
+    return Resume;
 })
