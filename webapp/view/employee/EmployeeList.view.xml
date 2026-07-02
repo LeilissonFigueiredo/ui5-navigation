@@ -8,17 +8,20 @@
         title="{i18n>EmployeeList}"
         showNavButton="true"
         navButtonPress=".onNavBack"
+        titleAlignment="Center" 
         class="sapUiResponsiveContentPadding">
         <content>
             <List 
                 id="lstEmployeeList"
                 headerText="{i18n>ListOfAllEmployees}"
-                items="{/Employees}">
+                items="{employees>/Employees}">
                 <items>
                     <StandardListItem
-                        title="{FirstName} {LastName}"
+                        title="{employees>FirstName} {employees>LastName}"
                         iconDensityAware="false"
-                        iconInset="false" />
+                        iconInset="false" 
+                        type="Navigation"
+                        press=".onListItemPressed"/>
                 </items>
             </List>
         </content>
